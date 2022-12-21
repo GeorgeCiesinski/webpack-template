@@ -1,1 +1,1 @@
-import test from "./test"
+// Index file serving as primary entry point

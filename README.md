@@ -47,3 +47,35 @@ The configuration `webpack.prod.js` creates a production build of the site when 
 `npm run build`
 
 The production build includes hashed names for cache busting. The SASS is converted into CSS and into a new CSS file with a hashed name. Additionally, the html, js, and css are minified for optimization purposes. 
+
+### Linter and Code Formatter
+
+This template includes a configured esLint and Prettier. 
+
+esLint highlights any errors if the extension is installed. Prettier must be ran manually when the code is to be formatted. 
+
+#### VSCode
+
+This template is meant to be used in VSCode. Ideally, the extensions `ESLint` and `Prettier - Code formatter` should also be installed. 
+
+#### esLint
+
+esLint linter is configured with `airbnb-eslint-config` and extends `Prettier`. In addition to this, there is a rule to allow extraneous dependencies like `devDependencies`.
+
+#### Prettier
+
+A configuration for Prettier is included as well as `.prettierignore` which ignores the `dist` folder created in production builds. The below commands can be used. 
+
+Format all files: 
+
+`npx prettier --write .`
+
+Format a directory
+
+`npx prettier --write app/`
+
+Format a file
+
+`npx prettier --write app/index.js`
+
+Prettier will indicate if there are problems with any configured `esLint` rules. 
